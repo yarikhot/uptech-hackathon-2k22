@@ -16,24 +16,19 @@ const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = 
     activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'List of deals',
-    path: `/${ROUTES.UserProfile}`,
-    activeRoutes: [`/${ROUTES.UserProfile}`],
-  },
-  {
     name: 'Leader board',
-    path: `/${ROUTES.UserProfile}`,
-    activeRoutes: [`/${ROUTES.UserProfile}`],
+    path: `/${ROUTES.LeaderBoard}`,
+    activeRoutes: [`/${ROUTES.LeaderBoard}`],
   },
   {
     name: 'Marketplace',
-    path: `/${ROUTES.UserProfile}`,
-    activeRoutes: [`/${ROUTES.UserProfile}`],
+    path: `/${ROUTES.MarketPlace}`,
+    activeRoutes: [`/${ROUTES.MarketPlace}`],
   },
   {
     name: 'Deals',
     path: `/${ROUTES.Deals}`,
-    activeRoutes: [`/${ROUTES.Deals}`, '/'],
+    activeRoutes: [`/${ROUTES.Deals}`],
   },
 ];
 

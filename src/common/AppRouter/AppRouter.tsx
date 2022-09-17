@@ -3,13 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import { ROUTES } from '@constants';
-import { Login, NotFound, Signup } from '@pages';
+import { DealsList, Login, NotFound, Signup } from '@pages';
 import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
 
 import { AppLayout } from '@templates/AppLayout';
 
 export const AppRouter: FC = () => {
-  const isAuthorized = false;
+  const isAuthorized = true;
 
   return (
     <Box height="100vh">
@@ -22,6 +22,7 @@ export const AppRouter: FC = () => {
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
               <Route index element="123" />
+              <Route path={ROUTES.Deals} element={<DealsList />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

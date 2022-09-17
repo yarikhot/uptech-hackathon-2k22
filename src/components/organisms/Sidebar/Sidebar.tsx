@@ -34,6 +34,11 @@ const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = 
     path: `/${ROUTES.People}`,
     activeRoutes: [`/${ROUTES.People}`, '/'],
   },
+  {
+    name: 'Deals',
+    path: `/${ROUTES.Deals}`,
+    activeRoutes: [`/${ROUTES.Deals}`, '/'],
+  },
 ];
 
 export const Sidebar: FC = () => {

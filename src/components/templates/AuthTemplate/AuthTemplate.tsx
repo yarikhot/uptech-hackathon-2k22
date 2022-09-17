@@ -1,10 +1,7 @@
 import { FC } from 'react';
 import { Box } from '@mui/material';
 
-import { ReactComponent as Logo } from '@assets/logo.svg';
-import bg from '@assets/auth-bg.svg';
-
-import { Wrapper, BackgroundImage } from './styles';
+import { Wrapper } from './styles';
 
 export const AuthTemplate: FC = ({ children }) => (
   <Wrapper>
@@ -26,11 +23,11 @@ export const AuthTemplate: FC = ({ children }) => (
         pb="100px"
       >
         <Box ml="178px" mt="44px" alignSelf="flex-start">
-          <Logo />
+          Logo
         </Box>
         {children}
       </Box>
     </Box>
-    <BackgroundImage src={bg} alt="Login" />
+    {/* <BackgroundImage src={bg} alt="Login" /> */}
   </Wrapper>
 );

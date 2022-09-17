@@ -2,8 +2,6 @@ import { CSSProperties } from 'react';
 import { createTheme } from '@mui/material';
 import type {} from '@mui/x-data-grid/themeAugmentation';
 
-import { Roles } from '@services';
-
 import { palette } from './palette';
 import { typography } from './typography';
 
@@ -19,11 +17,6 @@ declare module '@mui/material/styles' {
       primary: CSSProperties['color'];
       secondary: CSSProperties['color'];
     };
-    roles: {
-      [Roles.Admin]: CSSProperties['color'];
-      [Roles.Teacher]: CSSProperties['color'];
-      [Roles.Coach]: CSSProperties['color'];
-    };
   }
   interface PaletteOptions {
     status: {
@@ -35,11 +28,6 @@ declare module '@mui/material/styles' {
     backgrounds: {
       primary: CSSProperties['color'];
       secondary: CSSProperties['color'];
-    };
-    roles: {
-      [Roles.Admin]: CSSProperties['color'];
-      [Roles.Teacher]: CSSProperties['color'];
-      [Roles.Coach]: CSSProperties['color'];
     };
   }
 }

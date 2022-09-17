@@ -1,11 +1,11 @@
-import { Controller, Control, Path, useFormState } from 'react-hook-form';
+import { Controller, Control, Path, useFormState, FieldValues } from 'react-hook-form';
 import { TextField as MuiTextField, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import get from 'lodash.get';
 import { palette } from '@styles/palette';
 import { InputLabel } from '@atoms/InputLabel';
 
-export interface TextFieldProps<T> {
+export interface TextFieldProps<T extends FieldValues> {
   control: Control<T, object>;
   name: Path<T>;
   outsideError?: string;

@@ -1,4 +1,4 @@
-import { Controller, Control, Path, useFormState } from 'react-hook-form';
+import { Controller, Control, Path, useFormState, FieldValues } from 'react-hook-form';
 import {
   Typography,
   TextareaAutosize as MuiTextareaAutosize,
@@ -11,7 +11,7 @@ import { palette } from '@styles/palette';
 import { InputLabel } from '@atoms/InputLabel';
 import styled from 'styled-components';
 
-export interface TextareaAutosizeProps<T> {
+export interface TextareaAutosizeProps<T extends FieldValues> {
   control: Control<T, object>;
   name: Path<T>;
   outsideError?: string;

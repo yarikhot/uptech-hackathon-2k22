@@ -7,7 +7,6 @@ import { ROUTES } from '@constants';
 import { palette } from '@styles/palette';
 
 import { SidebarWrap, ListItemButton } from './styles';
-import { TopMenu } from './TopMenu';
 
 const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = [
   {
@@ -45,7 +44,6 @@ export const Sidebar: FC = () => {
     <SidebarWrap>
       <Box height="100%" display="flex" flexDirection="column" justifyContent="space-between">
         <Box height="100%">
-          <TopMenu />
           <List dense>
             <Divider sx={{ my: '25px' }} />
             {NAV_LIST.map(({ name, path, activeRoutes }) => (

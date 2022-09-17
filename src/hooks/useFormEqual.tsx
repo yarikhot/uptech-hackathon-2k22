@@ -1,8 +1,8 @@
 import { Dispatch, useEffect } from 'react';
 import isEqual from 'lodash.isequal';
-import { UseFormWatch, UseFormReset, UnpackNestedValue } from 'react-hook-form';
+import { UseFormWatch, UseFormReset, UnpackNestedValue, FieldValues } from 'react-hook-form';
 
-interface FormEqualParams<T> {
+interface FormEqualParams<T extends FieldValues> {
   setDisabled: Dispatch<boolean>;
   data: UnpackNestedValue<T>;
   reset: UseFormReset<T>;
@@ -10,7 +10,7 @@ interface FormEqualParams<T> {
   disabled: boolean;
 }
 
-export const useFormEqual = <T,>({
+export const useFormEqual = <T extends FieldValues>({
   setDisabled,
   data,
   reset,

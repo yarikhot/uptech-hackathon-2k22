@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ContentArea, SelectOption, Profile } from '@services';
 import { palette } from '@styles/palette';
 import { Auth } from 'aws-amplify';
 
@@ -48,26 +47,6 @@ export const stringAvatar = (name: string) =>
           : name[0]?.toUpperCase(),
       }
     : '';
-
-export const getNewContentAreas = (formAreas: SelectOption[], contentAreas: ContentArea[]) =>
-  formAreas?.reduce<{
-    known: ContentArea[];
-    custom: { name: string }[];
-  }>(
-    (accum, item) => {
-      const foundArea = contentAreas?.find(({ name }) => name === item.label);
-      if (foundArea) {
-        accum.known.push(foundArea);
-      } else {
-        accum.custom.push({ name: item.value as string });
-      }
-
-      return accum;
-    },
-    { known: [], custom: [] },
-  );
-
-export const sortUsers = (users: Profile[]): Profile[] => [...users.sort((a, b) => a.id - b.id)];
 
 export const getStepperColor = (index: number, currentStep: number) => {
   if (currentStep === index) return palette.primary.main;

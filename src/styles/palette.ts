@@ -1,5 +1,3 @@
-import { Roles } from '@services';
-
 export const palette = {
   primary: {
     main: '#6A5AFF',
@@ -48,10 +46,5 @@ export const palette = {
   backgrounds: {
     primary: '#F0EDFB',
     secondary: '#F8F8FD',
-  },
-  roles: {
-    [Roles.Admin]: '#FF8A67',
-    [Roles.Teacher]: '#9290A0',
-    [Roles.Coach]: '#8375DC',
   },
 };

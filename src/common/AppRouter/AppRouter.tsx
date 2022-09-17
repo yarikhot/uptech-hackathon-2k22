@@ -3,14 +3,17 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import { ROUTES } from '@constants';
-import { Login, NotFound, Signup } from '@pages';
+import { DealsList, Login, NotFound, Signup, UserProfile } from '@pages';
 import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
 import { AppLayout } from '@templates/AppLayout';
+import { useProfile } from '@hooks/useProfile';
 
 import { UserCard } from '@pages/LeaderBoard';
 
 export const AppRouter: FC = () => {
-  const isAuthorized = true;
+  const {
+    profile: { isAuthorized },
+  } = useProfile();
 
   return (
     <Box height="100vh">
@@ -22,7 +25,12 @@ export const AppRouter: FC = () => {
           </Route>
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
+<<<<<<< HEAD
               <Route path={ROUTES.LeaderBoard} element={<UserCard />} />
+=======
+              <Route path={ROUTES.UserProfile} element={<UserProfile />} />
+              <Route path={ROUTES.Deals} element={<DealsList />} />
+>>>>>>> 476ad0437b7929420b04046b4856182e5e5b4664
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

@@ -24,5 +24,8 @@ export enum ROUTES {
   Integrations = 'integrations',
   ManageReviews = 'manage-reviewcycles',
   CreateReview = 'create-review',
-  LeaderBoard = 'leader-board',
+  UserProfile = 'profile',
+  Deals = 'deals',
+  MarketPlace = 'marketplace',
+  LeaderBoard = 'leaderboard',
 }

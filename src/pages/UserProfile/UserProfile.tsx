@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import StarPurple500OutlinedIcon from '@mui/icons-material/StarPurple500Outlined';
 import CurrencyYenOutlinedIcon from '@mui/icons-material/CurrencyYenOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 
 import { fillProfileValidation } from '@constants';
 import { TextField } from '@atoms';
@@ -63,6 +64,9 @@ export const UserProfile: FC = () => {
         </Box>
       ) : (
         <Box mt="32px">
+          <Typography variant="h4" mb="12px">
+            Profile
+          </Typography>
           <Box
             sx={{
               padding: '12px 16px',
@@ -96,10 +100,12 @@ export const UserProfile: FC = () => {
               <SettingsSuggestOutlinedIcon />
             </IconButton>
           </Box>
-
-          <Typography mt="24px" variant="h4">
-            List of your deals
-          </Typography>
+          <Box display="flex" mt="24px" alignItems="center" justifyContent="space-between">
+            <Typography variant="h4">List of your deals</Typography>
+            <Button variant="contained" endIcon={<AddCircleOutlinedIcon />}>
+              Add you deal
+            </Button>
+          </Box>
         </Box>
       )}
     </Box>

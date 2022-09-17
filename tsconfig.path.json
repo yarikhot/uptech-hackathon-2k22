@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@atoms": ["src/components/atoms"],
+      "@atoms/*": ["src/components/atoms/*"],
+      "@icons": ["src/components/atoms/Icons"],
+      "@icons/*": ["src/components/atoms/Icons/*"],
+      "@molecules": ["src/components/molecules"],
+      "@molecules/*": ["src/components/molecules/*"],
+      "@organisms": ["src/components/organisms"],
+      "@organisms/*": ["src/components/organisms/*"],
+      "@templates": ["src/components/templates"],
+      "@templates/*": ["src/components/templates/*"],
+      "@pages": ["src/pages"],
+      "@pages/*": ["src/pages/*"],
+      "@constants": ["src/constants"],
+      "@constants/*": ["src/constants/*"],
+      "@helpers": ["src/helpers"],
+      "@helpers/*": ["src/helpers/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types": ["src/types"],
+      "@types/*": ["src/types/*"],
+      "@styles": ["src/styles"],
+      "@styles/*": ["src/styles/*"],
+      "@contexts": ["src/contexts"],
+      "@contexts/*": ["src/contexts/*"],
+      "@common": ["src/common"],
+      "@common/*": ["src/common/*"],
+      "@assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"],
+      "@services": ["src/services"],
+      "@services/*": ["src/services/*"],
+      "@features": ["src/features"],
+      "@features/*": ["src/features/*"]
+    },
+    "jsx": "preserve",
+    "isolatedModules": false
+  }
+}

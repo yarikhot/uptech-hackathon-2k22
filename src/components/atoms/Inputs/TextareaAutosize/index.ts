@@ -1,0 +1,1 @@
+export { TextareaAutosize } from './TextareaAutosize';

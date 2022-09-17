@@ -5,3 +5,5 @@ export * from './Loader';
 export * from './Modal';
 export * from './Link';
 export * from './InputLabel';
+export * from './Dropdown';
+export * from './ImageFileUpload';

@@ -63,11 +63,7 @@ export const UserProfile: FC = () => {
           </Box>
         </Box>
       </Box>
-      <AddDealModal isOpen={isModalOpen} onClose={onCloseModal}>
-        <Typography variant="h4" sx={{ mb: 4 }}>
-          Add a new deal
-        </Typography>
-      </AddDealModal>
+      <AddDealModal isOpen={isModalOpen} onClose={onCloseModal} />
     </>
   );
 };

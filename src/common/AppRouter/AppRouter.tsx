@@ -5,11 +5,12 @@ import { Box } from '@mui/material';
 import { ROUTES } from '@constants';
 import { Login, NotFound, Signup } from '@pages';
 import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
-
 import { AppLayout } from '@templates/AppLayout';
 
+import { UserCard } from '@pages/LeaderBoard';
+
 export const AppRouter: FC = () => {
-  const isAuthorized = false;
+  const isAuthorized = true;
 
   return (
     <Box height="100vh">
@@ -21,7 +22,7 @@ export const AppRouter: FC = () => {
           </Route>
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
-              <Route index element="123" />
+              <Route path={ROUTES.LeaderBoard} element={<UserCard />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

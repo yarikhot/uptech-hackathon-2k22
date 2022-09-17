@@ -61,7 +61,7 @@ export const Sidebar: FC = () => {
             <ListItemButton>
               <ListItemText
                 sx={{ mr: '6px' }}
-                primary="Add you deal"
+                primary="Add your deal"
                 primaryTypographyProps={{
                   variant: 'subtitle1',
                   color: 'text.secondary',

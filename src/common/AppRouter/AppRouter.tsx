@@ -10,7 +10,9 @@ import { AppLayout } from '@templates/AppLayout';
 import { useProfile } from '@hooks/useProfile';
 
 export const AppRouter: FC = () => {
-  const isAuthorized = true;
+  const {
+    profile: { isAuthorized },
+  } = useProfile();
 
   return (
     <Box height="100vh">

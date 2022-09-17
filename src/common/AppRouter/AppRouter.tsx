@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import { ROUTES } from '@constants';
-import { Login, NotFound, Signup, UserProfile } from '@pages';
+import { DealsList, Login, NotFound, Signup, UserProfile } from '@pages';
 import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
 
 import { AppLayout } from '@templates/AppLayout';
@@ -25,6 +25,7 @@ export const AppRouter: FC = () => {
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
               <Route path={ROUTES.UserProfile} element={<UserProfile />} />
+              <Route path={ROUTES.Deals} element={<DealsList />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

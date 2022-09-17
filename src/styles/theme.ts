@@ -4,6 +4,7 @@ import type {} from '@mui/x-data-grid/themeAugmentation';
 
 import { palette } from './palette';
 import { typography } from './typography';
+import { breakpoints } from './breakpoints';
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -320,4 +321,5 @@ export const theme = createTheme({
       },
     },
   },
+  breakpoints,
 });

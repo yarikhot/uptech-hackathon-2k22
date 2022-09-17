@@ -3,7 +3,7 @@ import { Box, Avatar, Typography } from '@mui/material';
 // remove after merge
 export const UserCard = ({
   id = 1,
-  name = ' some name',
+  name = 'some name',
   imageUrl = '/testImage.jpg',
   score = 10,
 }) => (
@@ -17,8 +17,7 @@ export const UserCard = ({
       height: '54px',
       backgroundColor: '#F5F7FC',
       borderRadius: '8px',
-      padding: '8px',
-      mb: '12px',
+      padding: '8px 16px',
     }}
   >
     <Box display="flex" alignItems="center">
@@ -31,7 +30,7 @@ export const UserCard = ({
       <Typography variant="body1" sx={{ mr: '16px', lineHeight: '38px' }}>
         {score}
       </Typography>
-      <Typography variant="body1" sx={{ fontSize: '38px', lineHeight: '38px' }}>
+      <Typography variant="body1" sx={{ fontSize: '28px', lineHeight: '28px' }}>
         ⭐️
       </Typography>
     </Box>

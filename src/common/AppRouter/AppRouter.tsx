@@ -8,7 +8,7 @@ import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
 import { AppLayout } from '@templates/AppLayout';
 import { useProfile } from '@hooks/useProfile';
 
-import { UserCard } from '@pages/LeaderBoard';
+import { LeaderBoard } from '@pages/LeaderBoard';
 
 export const AppRouter: FC = () => {
   const {
@@ -25,12 +25,9 @@ export const AppRouter: FC = () => {
           </Route>
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
-<<<<<<< HEAD
-              <Route path={ROUTES.LeaderBoard} element={<UserCard />} />
-=======
+              <Route path={ROUTES.LeaderBoard} element={<LeaderBoard />} />
               <Route path={ROUTES.UserProfile} element={<UserProfile />} />
               <Route path={ROUTES.Deals} element={<DealsList />} />
->>>>>>> 476ad0437b7929420b04046b4856182e5e5b4664
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

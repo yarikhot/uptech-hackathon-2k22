@@ -1,26 +1,39 @@
-import React from 'react';
 import { Box, Avatar, Typography } from '@mui/material';
-
-// test image
 
 // remove after merge
 export const UserCard = ({
-  // id = '1',
-  // userName = 'userName',
+  id = 1,
   name = ' some name',
-  // email = 'someemail@example.com',
   imageUrl = '/testImage.jpg',
+  score = 10,
 }) => (
   <Box
     display="flex"
     alignItems="center"
+    justifyContent="space-between"
+    key={id}
     sx={{
-      backgroundColor: ' #F5F7FC',
+      width: '378px',
+      height: '54px',
+      backgroundColor: '#F5F7FC',
       borderRadius: '8px',
       padding: '8px',
+      mb: '12px',
     }}
   >
-    <Avatar alt="avatar" src={imageUrl} sx={{ mr: '16px' }} />
-    <Typography variant="body1">{name}</Typography>
+    <Box display="flex" alignItems="center">
+      <Avatar alt="avatar" src={imageUrl} sx={{ mr: '16px' }} />
+      <Typography variant="body1" sx={{ lineHeight: '38px' }}>
+        {name}
+      </Typography>
+    </Box>
+    <Box display="flex" alignItems="center">
+      <Typography variant="body1" sx={{ mr: '16px', lineHeight: '38px' }}>
+        {score}
+      </Typography>
+      <Typography variant="body1" sx={{ fontSize: '38px', lineHeight: '38px' }}>
+        ⭐️
+      </Typography>
+    </Box>
   </Box>
 );

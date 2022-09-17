@@ -6,7 +6,7 @@ export interface User {
   imageUrl: string;
   password: string;
   isAuthorized: boolean;
-  league: LeagueTypes;
+  league?: LeagueTypes;
   score: number;
   coinAmount: number;
 }

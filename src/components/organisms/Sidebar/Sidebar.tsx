@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Box, Divider, List, ListItemText } from '@mui/material';
+import { Box, Divider, List, ListItemText, Typography } from '@mui/material';
 import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 
 import { ROUTES } from '@constants';
 import { palette } from '@styles/palette';
@@ -10,29 +11,24 @@ import { SidebarWrap, ListItemButton } from './styles';
 
 const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = [
   {
-    name: 'Reviews',
-    path: `/${ROUTES.Reviews}`,
-    activeRoutes: [`/${ROUTES.Reviews}`, `/${ROUTES.ManageReviews}`],
+    name: 'Profile',
+    path: `/${ROUTES.UserProfile}`,
+    activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Observation',
-    path: `/${ROUTES.Observation}`,
-    activeRoutes: [`/${ROUTES.Observation}`],
+    name: 'List of deals',
+    path: `/${ROUTES.UserProfile}`,
+    activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Feedback',
-    path: `/${ROUTES.Feedback}`,
-    activeRoutes: [`/${ROUTES.Feedback}`],
+    name: 'Leader board',
+    path: `/${ROUTES.UserProfile}`,
+    activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Goals',
-    path: `/${ROUTES.Goals}`,
-    activeRoutes: [`/${ROUTES.Goals}`],
-  },
-  {
-    name: 'People',
-    path: `/${ROUTES.People}`,
-    activeRoutes: [`/${ROUTES.People}`, '/'],
+    name: 'Marketplace',
+    path: `/${ROUTES.UserProfile}`,
+    activeRoutes: [`/${ROUTES.UserProfile}`],
   },
 ];
 
@@ -43,6 +39,7 @@ export const Sidebar: FC = () => {
   return (
     <SidebarWrap>
       <Box height="100%" display="flex" flexDirection="column" justifyContent="space-between">
+        <Typography variant="h4">YouAre</Typography>
         <Box height="100%">
           <List dense>
             <Divider sx={{ my: '25px' }} />
@@ -61,6 +58,17 @@ export const Sidebar: FC = () => {
                 />
               </ListItemButton>
             ))}
+            <ListItemButton>
+              <ListItemText
+                sx={{ mr: '6px' }}
+                primary="Add you deal"
+                primaryTypographyProps={{
+                  variant: 'subtitle1',
+                  color: 'text.secondary',
+                }}
+              />
+              <AddCircleOutlinedIcon htmlColor="#797789" />
+            </ListItemButton>
           </List>
         </Box>
         <Box>

@@ -223,13 +223,11 @@ export const theme = createTheme({
             },
             '& .MuiOutlinedInput-input': {
               borderRadius: '10px',
-              fontFamily: 'Plus Jakarta Sans',
               fontSize: '13px',
               height: '44px',
               lineHeight: '24px',
 
               '&::placeholder': {
-                fontFamily: 'Plus Jakarta Sans',
                 color: palette.text.disabled,
                 fontWeight: 400,
                 fontSize: '13px',

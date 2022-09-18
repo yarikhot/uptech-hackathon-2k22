@@ -14,13 +14,11 @@ export const Wrapper = styled.div`
 
     .MuiOutlinedInput-input {
       border-radius: 10px;
-      font-family: Plus Jakarta Sans;
       font-weight: 400;
       font-size: 15px;
       line-height: 175%;
 
       &::placeholder {
-        font-family: Plus Jakarta Sans;
         font-weight: 400;
         font-size: 15px;
         line-height: 175%;

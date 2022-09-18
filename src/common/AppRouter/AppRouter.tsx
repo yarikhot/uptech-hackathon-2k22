@@ -35,6 +35,7 @@ export const AppRouter: FC = () => {
           </Route>
           <Route element={<ProtectedRoute isAuthorized={isAuthorized} />}>
             <Route element={<AppLayout />}>
+              <Route index element={<LeaderBoard />} />
               <Route path={ROUTES.LeaderBoard} element={<LeaderBoard />} />
               <Route path={ROUTES.UserProfile} element={<UserProfile />} />
               <Route path={ROUTES.Deals} element={<DealsList />} />

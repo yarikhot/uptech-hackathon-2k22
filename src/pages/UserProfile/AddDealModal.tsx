@@ -1,15 +1,10 @@
 /* eslint-disable no-param-reassign */
-import React, { FC } from 'react';
-import { Box, Button, IconButton, Modal, Typography } from '@mui/material';
-import { useForm } from 'react-hook-form';
+import React, { FC, useState } from 'react';
+import { Box, IconButton, Modal, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { useDispatch } from 'react-redux';
 
-import { DealTypes } from '@types';
-import { Dropdown, ImageFileUpload } from '@atoms';
-
-import { addUserDeal, makeid } from 'src/store/userDeal';
-import { useProfile } from '@hooks/useProfile';
+import { CreatedPost } from './CreatedPost';
+import { AddDealForm } from './AddDealForm';
 
 const modalStyles = {
   position: 'absolute' as const,
@@ -27,62 +22,29 @@ interface IProps {
   onClose: () => void;
 }
 
-interface IFormData {
-  type: DealTypes;
-  imageUrl: string;
-}
-
-const dropdownOptions = [
-  { label: DealTypes.Blood, value: DealTypes.Blood },
-  { label: DealTypes.cleaning, value: DealTypes.cleaning },
-  { label: DealTypes.constructions, value: DealTypes.constructions },
-  { label: DealTypes.medicalHelp, value: DealTypes.medicalHelp },
-  { label: DealTypes.money, value: DealTypes.money },
-];
-
-const defaultValues = {
-  type: DealTypes.money,
-  imageUrl: '',
-};
-
 export const AddDealModal: FC<IProps> = ({ isOpen, onClose }) => {
-  const dispatch = useDispatch();
+  const [isCreatedPostOpen, setCreatedPostOpen] = useState(false);
 
-  const { profile } = useProfile();
-  const { handleSubmit, control, register, setValue } = useForm<IFormData>({
-    defaultValues,
-  });
-
-  const onSubmit = (formData: IFormData) => {
-    dispatch(
-      addUserDeal({
-        id: makeid(8),
-        title: 'title',
-        description: 'description',
-        type: formData.type,
-        imageUrl: formData.imageUrl,
-        date: '18-09-2022',
-        userId: profile.id,
-        amount: 30,
-      }),
-    );
-    onClose();
+  const onOpenCreatedPost = () => {
+    setCreatedPostOpen(true);
   };
 
-  const onStartLoad = () => console.log('onStartLoad');
-  const onFinishLoad = () => console.log('onFinishLoad');
+  const onModalClose = () => {
+    onClose();
+    setCreatedPostOpen(false);
+  };
 
   return (
     <Modal
       open={isOpen}
-      onClose={onClose}
+      onClose={onModalClose}
       aria-labelledby="add-deal-modal-title"
       aria-describedby="add-deal-modal-description"
     >
       <Box sx={modalStyles}>
         <IconButton
           aria-label="close"
-          onClick={onClose}
+          onClick={onModalClose}
           sx={{
             position: 'absolute',
             top: 4,
@@ -91,46 +53,20 @@ export const AddDealModal: FC<IProps> = ({ isOpen, onClose }) => {
         >
           <CloseIcon />
         </IconButton>
-        <Typography variant="h4" sx={{ mb: 4 }}>
-          Add a new deal
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 4 }}>
-          {/* TODO: update this copy!!! */}
-          Ми поважаємо тебе, тож постався, будь ласка, відповідально до звітування щодо твоєї участі
-          в певній активності
-        </Typography>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Dropdown
-            withoutLabel
-            control={control}
-            name="type"
-            placeholder=""
-            options={dropdownOptions}
-          />
-          <ImageFileUpload
-            register={register}
-            setValue={setValue}
-            fieldName="imageUrl"
-            imageURL=""
-            onStartLoad={onStartLoad}
-            onFinishLoad={onFinishLoad}
-          />
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              paddingTop: 4,
-            }}
-          >
-            <Button onClick={onClose} variant="outlined">
-              Закрити
-            </Button>
-            <Button type="submit" variant="contained">
-              Відправити
-            </Button>
-          </Box>
-        </form>
-        <Box />
+        {!isCreatedPostOpen ? (
+          <>
+            <Typography variant="h4" sx={{ mb: 4 }}>
+              Записати нову добру справу
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 4 }}>
+              {/* TODO: update this copy!!! */}
+              Ми поважаємо тебе, тож постався, будь ласка, відповідально до звітування щодо твоєї
+              участі в певній активності
+            </Typography>
+            <AddDealForm onClose={onModalClose} onOpenCreatedPost={onOpenCreatedPost} />
+          </>
+        ) : null}
+        {isCreatedPostOpen ? <CreatedPost /> : null}
       </Box>
     </Modal>
   );

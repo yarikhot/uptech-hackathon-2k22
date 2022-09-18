@@ -12,9 +12,9 @@ export interface User {
 }
 
 export enum LeagueTypes {
-  Low = 'Нижча',
-  Medium = 'Середня',
-  High = 'Вища',
+  High = 'Вища Ліга "HIMARS"',
+  Medium = 'Середня Ліга "Байрактар"',
+  Low = 'Нижча Ліга "Javelin"',
 }
 
 export interface Deal {

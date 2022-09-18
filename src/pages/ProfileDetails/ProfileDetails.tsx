@@ -10,12 +10,34 @@ import { useSelector } from 'react-redux';
 import { palette } from '@styles/palette';
 
 import { User } from '@types';
+import styled from 'styled-components';
+
+const DealRow = styled.div`
+  height: 70px;
+  border-bottom: 1px solid ${({ theme }) => theme.palette.divider};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+
+  .item {
+    width: 120px;
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.palette.backgrounds.primary};
+  }
+`;
 
 export const ProfileDetails: FC = () => {
-  const { id } = useParams();
+  const { id: paramId } = useParams();
   const users = useSelector((state: any) => state.users);
 
-  const user = users.find((item: User) => item.id === Number(id));
+  const user = users.find((item: User) => item.id === Number(paramId));
+
+  const dealsAll = useSelector((state: any) => state.userDeal);
+
+  const deals = dealsAll.filter(({ userId }: any) => Number(paramId) === userId);
 
   return (
     <Box display="flex" flexDirection="column" mt="16px">
@@ -56,6 +78,19 @@ export const ProfileDetails: FC = () => {
         <Box display="flex" mt="24px" alignItems="center" justifyContent="space-between">
           <Typography variant="h4">List of your deals</Typography>
         </Box>
+        {deals.map(({ id, type, date, amount }: any) => (
+          <DealRow key={id}>
+            <Typography className="item">{id}</Typography>
+            <Typography className="item">{type}</Typography>
+            <Typography className="item">{date}</Typography>
+            <Typography className="item" display="flex" alignItems="center">
+              {amount}{' '}
+              <Typography variant="body1" sx={{ fontSize: '28px', lineHeight: '28px', ml: '12px' }}>
+                ⭐️
+              </Typography>
+            </Typography>
+          </DealRow>
+        ))}
       </Box>
     </Box>
   );

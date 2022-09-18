@@ -18,7 +18,7 @@ export function makeid(length: number): string {
   return result;
 }
 
-const ramdomUserId = () => Math.floor(Math.random() * 10);
+const ramdomUserId = () => Math.floor(Math.random() * 13);
 
 const initialState: Array<UserDeal> = [
   {
@@ -92,6 +92,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.money,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -102,6 +103,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.cleaning,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -112,6 +114,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.medicalHelp,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -122,6 +125,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.money,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -132,6 +136,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.cleaning,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -142,6 +147,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.medicalHelp,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -152,6 +158,7 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.money,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
   {
@@ -163,6 +170,7 @@ const initialState: Array<UserDeal> = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
     userId: ramdomUserId(),
+    amount: 30,
   },
   {
     id: makeid(8),
@@ -172,6 +180,194 @@ const initialState: Array<UserDeal> = [
     type: DealTypes.medicalHelp,
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
     date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.cleaning,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
+    userId: ramdomUserId(),
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.medicalHelp,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.cleaning,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.cleaning,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.cleaning,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.constructions,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
+    userId: ramdomUserId(),
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.constructions,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
+    userId: ramdomUserId(),
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.constructions,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.constructions,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
+    userId: ramdomUserId(),
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
+    userId: ramdomUserId(),
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.medicalHelp,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    userId: ramdomUserId(),
+    amount: 30,
+  },
+  {
+    id: makeid(8),
+    title: 'Lizard 2',
+    description:
+      'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    type: DealTypes.money,
+    imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
+    date: '24-02-2022',
+    amount: 30,
     userId: ramdomUserId(),
   },
 ];

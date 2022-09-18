@@ -42,10 +42,17 @@ export const UserProfile: FC = () => {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" mt="16px">
-        <Box mt="32px">
-          <Typography variant="h4" mb="12px">
-            Profile
+      <Box display="flex" flexDirection="column">
+        <Box>
+          <Typography
+            variant="h3"
+            color="text.primary"
+            sx={{
+              pt: 4,
+              pb: 4,
+            }}
+          >
+            Профіль
           </Typography>
           <Box
             sx={{
@@ -84,9 +91,9 @@ export const UserProfile: FC = () => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <Typography variant="h4">List of your deals</Typography>
+            <Typography variant="h4">Список добрих справ</Typography>
             <Button variant="contained" endIcon={<AddCircleOutlinedIcon />} onClick={onOpenModal}>
-              Add you deal
+              Додати добру справу
             </Button>
           </Box>
           {deals.map(({ id, type, date, amount }: any) => (

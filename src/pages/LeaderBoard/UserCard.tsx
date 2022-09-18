@@ -22,7 +22,7 @@ export const UserCard = ({
       key={id}
       onClick={onClick}
       sx={{
-        width: '378px',
+        width: '540px',
         height: '54px',
         backgroundColor: '#F5F7FC',
         borderRadius: '8px',

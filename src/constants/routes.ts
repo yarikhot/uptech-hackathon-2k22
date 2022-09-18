@@ -30,4 +30,5 @@ export enum ROUTES {
   MarketPlace = 'marketplace',
   LeaderBoard = 'leaderboard',
   NewsFeed = 'feed',
+  Post = 'feed/:id',
 }

@@ -1,5 +1,5 @@
 export const typography = {
-  fontFamily: 'Plus Jakarta Sans',
+  fontFamily: 'Roboto, sans-serif',
   h1: {
     fontWeight: 300,
     fontSize: '96px',

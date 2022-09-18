@@ -3,9 +3,13 @@ import React, { FC } from 'react';
 import { Box, Button, IconButton, Modal, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import CloseIcon from '@mui/icons-material/Close';
+import { useDispatch } from 'react-redux';
 
 import { DealTypes } from '@types';
 import { Dropdown, ImageFileUpload } from '@atoms';
+
+import { addUserDeal, makeid } from 'src/store/userDeal';
+import { useProfile } from '@hooks/useProfile';
 
 const modalStyles = {
   position: 'absolute' as const,
@@ -24,30 +28,45 @@ interface IProps {
 }
 
 interface IFormData {
-  type: number;
+  type: DealTypes;
   imageUrl: string;
 }
 
 const dropdownOptions = [
-  { label: DealTypes.Blood, value: 1 },
-  { label: DealTypes.cleaning, value: 2 },
-  { label: DealTypes.constructions, value: 3 },
-  { label: DealTypes.medicalHelp, value: 4 },
-  { label: DealTypes.money, value: 5 },
+  { label: DealTypes.Blood, value: DealTypes.Blood },
+  { label: DealTypes.cleaning, value: DealTypes.cleaning },
+  { label: DealTypes.constructions, value: DealTypes.constructions },
+  { label: DealTypes.medicalHelp, value: DealTypes.medicalHelp },
+  { label: DealTypes.money, value: DealTypes.money },
 ];
 
 const defaultValues = {
-  type: 5,
+  type: DealTypes.money,
   imageUrl: '',
 };
 
 export const AddDealModal: FC<IProps> = ({ isOpen, onClose }) => {
+  const dispatch = useDispatch();
+
+  const { profile } = useProfile();
   const { handleSubmit, control, register, setValue } = useForm<IFormData>({
     defaultValues,
   });
 
   const onSubmit = (formData: IFormData) => {
-    console.log('formData', formData);
+    dispatch(
+      addUserDeal({
+        id: makeid(8),
+        title: 'title',
+        description: 'description',
+        type: formData.type,
+        imageUrl: formData.imageUrl,
+        date: '18-09-2022',
+        userId: profile.id,
+        amount: 30,
+      }),
+    );
+    onClose();
   };
 
   const onStartLoad = () => console.log('onStartLoad');

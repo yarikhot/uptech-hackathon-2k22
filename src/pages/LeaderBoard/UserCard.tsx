@@ -11,7 +11,7 @@ export const UserCard = ({
   const navigate = useNavigate();
 
   const onClick = () => {
-    navigate(`profile/${id}`);
+    navigate(`/profile/${id}`, { replace: true });
   };
 
   return (

@@ -18,13 +18,18 @@ export enum LeagueTypes {
 }
 
 export interface Deal {
-  id: number;
+  id: string;
   transactionId?: number;
   title: string;
   description: string;
   amount?: number;
   type: DealTypes;
-  imageUrl: string;
+  imageUrl?: string;
+}
+
+export interface UserDeal extends Deal {
+  date: string;
+  userId: number;
 }
 
 export type DealList = Deal[];

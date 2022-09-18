@@ -5,14 +5,17 @@ import StarPurple500OutlinedIcon from '@mui/icons-material/StarPurple500Outlined
 import CurrencyYenOutlinedIcon from '@mui/icons-material/CurrencyYenOutlined';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
 import { useParams } from 'react-router-dom';
-
-import { useProfile } from '@hooks/useProfile';
+import { useSelector } from 'react-redux';
 
 import { palette } from '@styles/palette';
 
-export const UserProfile: FC = () => {
+import { User } from '@types';
+
+export const ProfileDetails: FC = () => {
   const { id } = useParams();
-  const { profile } = useProfile();
+  const users = useSelector((state: any) => state.users);
+
+  const user = users.find((item: User) => item.id === Number(id));
 
   return (
     <Box display="flex" flexDirection="column" mt="16px">
@@ -32,17 +35,17 @@ export const UserProfile: FC = () => {
             <Avatar
               sizes="70px"
               sx={{ height: '80px', width: '80px', mr: '16px' }}
-              src={profile.imageUrl}
+              src={user.imageUrl}
             />
             <Box>
-              <Typography variant="h7">{profile.userName}</Typography>
+              <Typography variant="h7">{user.userName}</Typography>
               <br />
-              <Typography>{profile.email}</Typography>
+              <Typography>{user.email}</Typography>
               <Box display="flex" alignItems="center">
                 <StarPurple500OutlinedIcon />
-                {profile.score}
+                {user.score}
                 <CurrencyYenOutlinedIcon />
-                {profile.coinAmount}
+                {user.coinAmount}
               </Box>
             </Box>
           </Box>

@@ -9,10 +9,11 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import { theme } from '@styles';
-import { dealsList } from './utils';
+import { useSelector } from 'react-redux';
 
 export const DealsList: FC = () => {
   const matches = useMediaQuery(theme.breakpoints.up('lg'));
+  const dealsList = useSelector((state: any) => state.deals);
 
   return (
     <Container maxWidth="xl">
@@ -27,7 +28,7 @@ export const DealsList: FC = () => {
         Deals
       </Typography>
       <Grid container spacing={6} sx={{ pt: 4, pb: 4 }}>
-        {dealsList.map(({ id, title, description, type, imageUrl }) => (
+        {dealsList.map(({ id, title, description, type, imageUrl }: any) => (
           <Grid item xs={matches ? 4 : undefined} key={id}>
             <Card>
               <CardMedia component="img" height="140" image={imageUrl} alt="image" />

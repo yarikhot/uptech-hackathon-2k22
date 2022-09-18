@@ -2,11 +2,15 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import { profileReducer } from './profileSlice';
 import { useresReducres } from './listOfUsers';
+import { dealReducers } from './deals';
+import { userDealReducers } from './userDeal';
 
 export const store = configureStore({
   reducer: {
     profile: profileReducer,
     users: useresReducres,
+    deals: dealReducers,
+    userDeal: userDealReducers,
   },
 });
 

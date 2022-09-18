@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { useProfile } from '@hooks/useProfile';
 
 import { palette } from '@styles/palette';
-import { DealTypes } from '@types';
+import { useSelector } from 'react-redux';
 import { AddDealModal } from './AddDealModal';
 
 const DealRow = styled.div`
@@ -30,18 +30,11 @@ const DealRow = styled.div`
   }
 `;
 
-const mock = [
-  { id: 1, deal: DealTypes.Blood, date: '24-02-2022', amount: 30 },
-  { id: 2, deal: DealTypes.cleaning, date: '24-02-2022', amount: 30 },
-  { id: 3, deal: DealTypes.constructions, date: '24-02-2022', amount: 30 },
-  { id: 4, deal: DealTypes.medicalHelp, date: '24-02-2022', amount: 30 },
-  { id: 5, deal: DealTypes.money, date: '24-02-2022', amount: 30 },
-  { id: 6, deal: DealTypes.money, date: '24-02-2022', amount: 30 },
-  { id: 7, deal: DealTypes.money, date: '24-02-2022', amount: 30 },
-];
-
 export const UserProfile: FC = () => {
   const { profile } = useProfile();
+  const dealsAll = useSelector((state: any) => state.userDeal);
+
+  const deals = dealsAll.filter(({ userId }: any) => profile.id === userId);
 
   const [isModalOpen, setOpenModal] = useState(false);
   const onOpenModal = () => setOpenModal(true);
@@ -96,10 +89,10 @@ export const UserProfile: FC = () => {
               Add you deal
             </Button>
           </Box>
-          {mock.map(({ id, deal, date, amount }) => (
+          {deals.map(({ id, type, date, amount }: any) => (
             <DealRow key={id}>
               <Typography className="item">{id}</Typography>
-              <Typography className="item">{deal}</Typography>
+              <Typography className="item">{type}</Typography>
               <Typography className="item">{date}</Typography>
               <Typography className="item" display="flex" alignItems="center">
                 {amount}{' '}

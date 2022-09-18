@@ -9,6 +9,7 @@ import { AppLayout } from '@templates/AppLayout';
 import { useProfile } from '@hooks/useProfile';
 
 import { LeaderBoard } from '@pages/LeaderBoard';
+import { ProfileDetails } from '@pages/ProfileDetails';
 
 export const AppRouter: FC = () => {
   const {
@@ -30,6 +31,7 @@ export const AppRouter: FC = () => {
               <Route path={ROUTES.Deals} element={<DealsList />} />
               <Route path={ROUTES.MarketPlace} element="marketplace" />
               <Route path={ROUTES.NewsFeed} element={<NewsFeed />} />
+              <Route path={ROUTES.ProfileDetail} element={<ProfileDetails />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFound />} />

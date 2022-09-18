@@ -1,8 +1,14 @@
-import { Deal, DealTypes } from '@types';
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
-export const dealsList: Deal[] = [
+import { Deal, DealTypes } from '../types';
+
+import { makeid } from './userDeal';
+
+const initialState: Array<Deal> = [
   {
-    id: 34234234,
+    id: makeid(8),
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -10,7 +16,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 2342355,
+    id: makeid(8),
     title: 'Lizard 1',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -18,7 +24,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 234235532434,
+    id: makeid(8),
     title: 'Lizard 2',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -26,7 +32,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 34353545345,
+    id: makeid(8),
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -34,7 +40,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 1211112323,
+    id: makeid(8),
     title: 'Lizard 1',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -42,7 +48,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 3454353450304395,
+    id: makeid(8),
     title: 'Lizard 2',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -50,7 +56,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 732782387282992,
+    id: makeid(8),
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -58,7 +64,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 72839823092923,
+    id: makeid(8),
     title: 'Lizard 1',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -66,7 +72,7 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
   {
-    id: 63623723673267,
+    id: makeid(8),
     title: 'Lizard 2',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
@@ -74,3 +80,18 @@ export const dealsList: Deal[] = [
     imageUrl: '/pexels-antoni-shkraba-7345444.jpg',
   },
 ];
+
+export const dealSlice = createSlice({
+  name: 'deals',
+  initialState,
+  reducers: {
+    addDeals: (state, action: PayloadAction<Deal>) => {
+      state.push(action.payload);
+    },
+  },
+});
+
+// Action creators are generated for each case reducer function
+export const { addDeals } = dealSlice.actions;
+
+export const dealReducers = dealSlice.reducer;

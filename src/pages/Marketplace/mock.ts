@@ -24,13 +24,6 @@ export const mock = [
   ],
   [
     {
-      name: 'Фото від Даши Астафєвой',
-      price: '30 coins',
-      imageLink:
-        'https://showbiz.24tv.ua/resources/photos/news/202207/2076620.jpg?v=1661252520000&q=100',
-      id: 4,
-    },
-    {
       name: 'Фото від Аліни',
       price: '30 coins',
       imageLink:

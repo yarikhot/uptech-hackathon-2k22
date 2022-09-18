@@ -16,7 +16,7 @@ const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = 
     activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Leader board',
+    name: 'Leaderboard',
     path: `/${ROUTES.LeaderBoard}`,
     activeRoutes: [`/${ROUTES.LeaderBoard}`],
   },
@@ -24,6 +24,11 @@ const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = 
     name: 'Marketplace',
     path: `/${ROUTES.MarketPlace}`,
     activeRoutes: [`/${ROUTES.MarketPlace}`],
+  },
+  {
+    name: 'News Feed',
+    path: `/${ROUTES.NewsFeed}`,
+    activeRoutes: [`/${ROUTES.NewsFeed}`],
   },
   {
     name: 'Deals',
@@ -61,7 +66,7 @@ export const Sidebar: FC = () => {
             <ListItemButton>
               <ListItemText
                 sx={{ mr: '6px' }}
-                primary="Add you deal"
+                primary="Add your deal"
                 primaryTypographyProps={{
                   variant: 'subtitle1',
                   color: 'text.secondary',

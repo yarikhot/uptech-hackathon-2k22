@@ -3,7 +3,16 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import { ROUTES } from '@constants';
-import { DealsList, Login, NewsFeed, NotFound, Post, Signup, UserProfile } from '@pages';
+import {
+  DealsList,
+  Login,
+  Marketplace,
+  NewsFeed,
+  NotFound,
+  Post,
+  Signup,
+  UserProfile,
+} from '@pages';
 import { ProtectedRoute, PublicRoute, Loader } from '@atoms';
 import { AppLayout } from '@templates/AppLayout';
 import { useProfile } from '@hooks/useProfile';
@@ -28,7 +37,7 @@ export const AppRouter: FC = () => {
               <Route path={ROUTES.LeaderBoard} element={<LeaderBoard />} />
               <Route path={ROUTES.UserProfile} element={<UserProfile />} />
               <Route path={ROUTES.Deals} element={<DealsList />} />
-              <Route path={ROUTES.MarketPlace} element="marketplace" />
+              <Route path={ROUTES.MarketPlace} element={<Marketplace />} />
               <Route path={ROUTES.NewsFeed} element={<NewsFeed />} />
               <Route path={ROUTES.Post} element={<Post />} />
             </Route>

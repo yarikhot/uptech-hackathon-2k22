@@ -1,6 +1,8 @@
 // components
 import { Box, Typography } from '@mui/material';
+
 import { LeagueTypes } from '@types';
+
 import { UserCard } from './UserCard';
 import { mockData } from './mock';
 

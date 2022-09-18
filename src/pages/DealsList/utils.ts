@@ -1,4 +1,4 @@
-import { Deal, DealTypes } from 'src/Types';
+import { Deal, DealTypes } from '@types';
 
 export const dealsList: Deal[] = [
   {

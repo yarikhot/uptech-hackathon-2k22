@@ -1,21 +1,21 @@
 export const mock = [
   [
     {
-      name: 'Some amazing NFT',
+      name: 'Нууу дуже кайфова NFT',
       price: '30 coins',
       imageLink:
         'https://i.seadn.io/gae/5YjArMUOfuIewpyg6Y1UjoV2amyXTThcid-fI7356G-2ZOJbX7TFijRz7NLoV2G9jyya-n6VKrNFvC8MyaRP7uQpDXqpHB4keS2o7A?w=500&auto=format',
       id: 1,
     },
     {
-      name: 'Some amazing NFT',
+      name: 'Нууу дуже кайфова NFT',
       price: '30 coins',
       imageLink:
         'https://i.seadn.io/gae/gmrlZWQ7RPiBNeFIc2Ob_ARXYB4G76_ybVEryWD2zD2qFIhmZgCiEoT6wnJQ7OCC35vNE2fGkoPpelIdYcJlX-02fmSvcztWLMAQ?w=500&auto=format',
       id: 2,
     },
     {
-      name: 'Some amazing NFT',
+      name: 'Нууу дуже кайфова NFT',
       price: '30 coins',
       imageLink:
         'https://i.seadn.io/gae/Ntv_c2jcEq3i-lkj23PuMzBe1zyu5-cEpQLvQVbs1iMlzhbs_r_fXjTA3uSksD9JE2Vpurc1rvXvXyIXx916B5sv8aTse7IHYwKt7gE?w=500&auto=format',

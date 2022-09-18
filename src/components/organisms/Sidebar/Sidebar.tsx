@@ -11,27 +11,27 @@ import { SidebarWrap, ListItemButton } from './styles';
 
 const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = [
   {
-    name: 'Profile',
+    name: 'Профіль',
     path: `/${ROUTES.UserProfile}`,
     activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Leaderboard',
+    name: 'Таблиця лфдерів',
     path: `/${ROUTES.LeaderBoard}`,
     activeRoutes: [`/${ROUTES.LeaderBoard}`],
   },
   {
-    name: 'Marketplace',
+    name: 'Потратити коіни',
     path: `/${ROUTES.MarketPlace}`,
     activeRoutes: [`/${ROUTES.MarketPlace}`],
   },
   {
-    name: 'News Feed',
+    name: 'Новини',
     path: `/${ROUTES.NewsFeed}`,
     activeRoutes: [`/${ROUTES.NewsFeed}`],
   },
   {
-    name: 'Deals',
+    name: 'Добрі справи',
     path: `/${ROUTES.Deals}`,
     activeRoutes: [`/${ROUTES.Deals}`],
   },
@@ -66,7 +66,7 @@ export const Sidebar: FC = () => {
             <ListItemButton>
               <ListItemText
                 sx={{ mr: '6px' }}
-                primary="Add your deal"
+                primary="Додати добру справу"
                 primaryTypographyProps={{
                   variant: 'subtitle1',
                   color: 'text.secondary',

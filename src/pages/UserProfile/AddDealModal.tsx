@@ -56,7 +56,7 @@ export const AddDealModal: FC<IProps> = ({ isOpen, onClose }) => {
         {!isCreatedPostOpen ? (
           <>
             <Typography variant="h4" sx={{ mb: 4 }}>
-              Add a new deal
+              Записати нову добру справу
             </Typography>
             <Typography variant="body1" sx={{ mb: 4 }}>
               {/* TODO: update this copy!!! */}

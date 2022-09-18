@@ -20,7 +20,7 @@ const Card = styled(MuiCard)`
   cursor: pointer;
   min-width: 330px;
   max-width: 330px;
-  min-height: 440px;
+  min-height: 400px;
 
   img {
     height: 280px;
@@ -62,16 +62,18 @@ export const Marketplace: FC = () => {
                 <Typography gutterBottom variant="h7" component="div">
                   {name}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.primary"
-                  sx={{
-                    fontWeight: 600,
-                  }}
-                >
-                  Price: {price}
-                </Typography>
-                <Button size="small">Buy</Button>
+                <Box display="flex" alignItems="center" justifyContent="space-between">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{
+                      fontWeight: 600,
+                    }}
+                  >
+                    Ціна: {price}
+                  </Typography>
+                  <Button size="small">Купити</Button>
+                </Box>
               </CardContent>
             </Card>
           </Grid>

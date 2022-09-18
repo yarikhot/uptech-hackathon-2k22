@@ -52,7 +52,7 @@ export const UserProfile: FC = () => {
       <Box display="flex" flexDirection="column" mt="16px">
         <Box mt="32px">
           <Typography variant="h4" mb="12px">
-            Profile
+            Профіль
           </Typography>
           <Box
             sx={{
@@ -91,9 +91,9 @@ export const UserProfile: FC = () => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <Typography variant="h4">List of your deals</Typography>
+            <Typography variant="h4">Список добрих справ</Typography>
             <Button variant="contained" endIcon={<AddCircleOutlinedIcon />} onClick={onOpenModal}>
-              Add you deal
+              Додати добру справу
             </Button>
           </Box>
           {mock.map(({ id, deal, date, amount }) => (

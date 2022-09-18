@@ -6,3 +6,4 @@ export { DealsList } from './DealsList';
 export { LeaderBoard } from './LeaderBoard';
 export { NewsFeed } from './NewsFeed';
 export { Marketplace } from './Marketplace';
+export { Post } from './Post';

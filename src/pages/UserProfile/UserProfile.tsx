@@ -49,9 +49,16 @@ export const UserProfile: FC = () => {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" mt="16px">
-        <Box mt="32px">
-          <Typography variant="h4" mb="12px">
+      <Box display="flex" flexDirection="column">
+        <Box>
+          <Typography
+            variant="h3"
+            color="text.primary"
+            sx={{
+              pt: 4,
+              pb: 4,
+            }}
+          >
             Профіль
           </Typography>
           <Box

@@ -16,17 +16,17 @@ const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = 
     activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Таблиця лфдерів',
+    name: 'Таблиця лідерів',
     path: `/${ROUTES.LeaderBoard}`,
     activeRoutes: [`/${ROUTES.LeaderBoard}`],
   },
   {
-    name: 'Потратити коіни',
+    name: 'Маркетплейс',
     path: `/${ROUTES.MarketPlace}`,
     activeRoutes: [`/${ROUTES.MarketPlace}`],
   },
   {
-    name: 'Новини',
+    name: 'Блог',
     path: `/${ROUTES.NewsFeed}`,
     activeRoutes: [`/${ROUTES.NewsFeed}`],
   },

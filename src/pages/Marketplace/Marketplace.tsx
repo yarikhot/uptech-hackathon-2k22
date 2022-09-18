@@ -42,7 +42,14 @@ export const Marketplace: FC = () => {
 
   return (
     <div>
-      <Typography variant="h4" my="24px">
+      <Typography
+        variant="h3"
+        color="text.primary"
+        sx={{
+          pt: 4,
+          pb: 4,
+        }}
+      >
         Marketplace
       </Typography>
       <Tabs value={page} onChange={(e, newPage) => setPage(newPage)}>

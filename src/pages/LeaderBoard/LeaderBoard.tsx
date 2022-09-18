@@ -8,11 +8,17 @@ export const LeaderBoard = () => {
   const users = useSelector((state: any) => state.users);
 
   return (
-    <Box
-      sx={{
-        paddingTop: '36px',
-      }}
-    >
+    <Box>
+      <Typography
+        variant="h3"
+        color="text.primary"
+        sx={{
+          pt: 4,
+          pb: 4,
+        }}
+      >
+        Таблиця лідерів
+      </Typography>
       {(Object.keys(LeagueTypes) as Array<keyof typeof LeagueTypes>).map((key) => (
         <Box display="flex" flexDirection="column" sx={{ mb: '48px' }}>
           <Typography variant="h6" component="h6" sx={{ mb: '36px' }}>

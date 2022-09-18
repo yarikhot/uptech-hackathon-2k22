@@ -1,9 +1,10 @@
 /* eslint-disable no-param-reassign */
 import React, { FC } from 'react';
 import { Box, Button, IconButton, Modal, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
 import { useForm } from 'react-hook-form';
-import { DealTypes } from 'src/Types';
+import CloseIcon from '@mui/icons-material/Close';
+
+import { DealTypes } from '@types';
 import { Dropdown, ImageFileUpload } from '@atoms';
 
 const modalStyles = {

@@ -28,6 +28,7 @@ export const AppRouter: FC = () => {
               <Route path={ROUTES.LeaderBoard} element={<LeaderBoard />} />
               <Route path={ROUTES.UserProfile} element={<UserProfile />} />
               <Route path={ROUTES.Deals} element={<DealsList />} />
+              <Route path={ROUTES.MarketPlace} element="marketplace" />
               <Route path={ROUTES.NewsFeed} element={<NewsFeed />} />
             </Route>
           </Route>

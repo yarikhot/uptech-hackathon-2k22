@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { User } from 'src/Types';
+import { User } from '@types';
 
 export const useProfile = () => {
   const profile = useSelector((state: any) => state.profile);

@@ -5,3 +5,4 @@ export { UserProfile } from './UserProfile';
 export { DealsList } from './DealsList';
 export { LeaderBoard } from './LeaderBoard';
 export { NewsFeed } from './NewsFeed';
+export { Post } from './Post';

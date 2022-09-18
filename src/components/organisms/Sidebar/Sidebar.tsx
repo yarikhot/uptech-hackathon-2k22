@@ -11,22 +11,22 @@ import { SidebarWrap, ListItemButton } from './styles';
 
 const NAV_LIST: Array<{ name: string; path: string; activeRoutes: string[] }> = [
   {
-    name: 'Profile',
+    name: 'Профіль',
     path: `/${ROUTES.UserProfile}`,
     activeRoutes: [`/${ROUTES.UserProfile}`],
   },
   {
-    name: 'Leaderboard',
+    name: 'Таблиця лідерів',
     path: `/${ROUTES.LeaderBoard}`,
     activeRoutes: [`/${ROUTES.LeaderBoard}`],
   },
   {
-    name: 'Marketplace',
+    name: 'Маркетплейс',
     path: `/${ROUTES.MarketPlace}`,
     activeRoutes: [`/${ROUTES.MarketPlace}`],
   },
   {
-    name: 'News Feed',
+    name: 'Блог',
     path: `/${ROUTES.NewsFeed}`,
     activeRoutes: [`/${ROUTES.NewsFeed}`],
   },

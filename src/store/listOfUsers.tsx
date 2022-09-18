@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { LeagueTypes, User } from '../Types';
+import { LeagueTypes, User } from '../types';
 
 const initialState: Array<User> = [
   {

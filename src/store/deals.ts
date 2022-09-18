@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { Deal, DealTypes } from '../types';
+import { Deal, DealTypes } from '@types';
 
 import { makeid } from './userDeal';
 

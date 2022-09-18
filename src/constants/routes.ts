@@ -25,6 +25,7 @@ export enum ROUTES {
   ManageReviews = 'manage-reviewcycles',
   CreateReview = 'create-review',
   UserProfile = 'profile',
+  ProfileDetail = 'profile/:id',
   Deals = 'deals',
   MarketPlace = 'marketplace',
   LeaderBoard = 'leaderboard',

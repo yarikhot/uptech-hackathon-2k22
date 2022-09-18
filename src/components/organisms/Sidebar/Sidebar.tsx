@@ -82,7 +82,7 @@ export const Sidebar: FC = () => {
             <HelpOutlinedIcon htmlColor={palette.action.active} fontSize="small" />
             <ListItemText
               sx={{ ml: '7px' }}
-              primary="Get help"
+              primary="Отримати допогу"
               primaryTypographyProps={{
                 variant: 'subtitle1',
                 color: 'text.secondary',

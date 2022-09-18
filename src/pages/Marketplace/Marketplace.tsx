@@ -50,7 +50,7 @@ export const Marketplace: FC = () => {
           pb: 4,
         }}
       >
-        Marketplace
+        Маркетплейс
       </Typography>
       <Tabs value={page} onChange={(e, newPage) => setPage(newPage)}>
         <Tab label="NFT" />
